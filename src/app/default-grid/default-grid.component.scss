@@ -1,0 +1,47 @@
+.main-container {
+  background: #ed745a;
+  overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+.main-container {
+  & > div {
+    background-color: yellow;
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  .three {
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .span-2 {
+    grid-column: span 2;
+  }
+  .span-3 {
+    grid-column: span 3;
+  }
+  .five {
+    grid-column-start: 4;
+    grid-row-start: 1;
+  }
+  .three {
+    grid-row-start: 2;
+  }
+  .four {
+    grid-column: 3/5;
+  }
+}

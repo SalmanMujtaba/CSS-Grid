@@ -1,26 +1,2 @@
-<!-- <main class="main-container">
-  <div class="container">
-    <div class="one">
-      <div class="internal">1</div>
-    </div>
-    <div>
-      <div class="internal">2</div>
-    </div>
-    <div>
-      <div class="internal">3</div>
-    </div>
-    <div>
-      <div class="internal">4</div>
-    </div>
-    <div class="five">
-      <div class="internal">5</div>
-    </div>
-  </div>
-</main> -->
-<main class="main-container">
-  <div class="one span-2">1</div>
-  <div class="two">2</div>
-  <div class="three">3</div>
-  <div class="four span-2">4</div>
-  <div class="five">5</div>
-</main>
+<app-default-grid *ngIf="isDefaultGrid"></app-default-grid>
+<app-template-rows *ngIf="!isDefaultGrid"></app-template-rows>

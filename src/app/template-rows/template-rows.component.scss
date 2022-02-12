@@ -1,0 +1,53 @@
+
+
+.template-container {
+  background: #ed745a;
+  overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 780px;
+  grid-template-areas: 
+    "three"
+    "two"
+    "one"
+    "four"
+    "five";
+  & > div {
+    background-color: yellow;
+  }
+  &:nth-child(1) {
+    grid-area: one;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .template-container {
+    grid-template-areas: 
+      "one one two five"
+      "three . four four";
+  }
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four{
+  grid-area: four;
+}
+
+.five{
+  grid-area: five;
+}
