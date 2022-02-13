@@ -1,0 +1,33 @@
+.page-setup {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 1fr 100px;
+}
+
+header {
+  // height: 10vh;
+  background: yellow;
+  position: sticky;
+  grid-area: header;
+  top: 0;
+}
+
+main {
+  grid-area: main;
+  background: white;
+}
+
+aside {
+  grid-area: aside;
+  background: pink;
+}
+
+footer {
+  grid-area: footer;
+  background: gray;
+}
